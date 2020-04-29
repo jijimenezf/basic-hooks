@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CustomInput from './components/CustomInput';
+import CounterExample from './components/CounterExample';
+import CustomReducer from './components/CustomReducer';
 
 function App() {
   return (
@@ -19,6 +22,10 @@ function App() {
           Learn React
         </a>
       </header>
+      <CounterExample />
+      <br/>
+      <CustomReducer />
+      <CustomInput />
     </div>
   );
 }
