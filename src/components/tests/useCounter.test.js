@@ -7,9 +7,9 @@ describe('useCounter react hook', () => {
     let result;
     let useEffect;
 
-    const mockUseEffect = () => {
+    /* const mockUseEffect = () => {
         useEffect.mockImplementationOnce(f => f());
-    };
+    }; */
     beforeEach(() => {
         testHook(() => {
             result = useCounter();
@@ -17,8 +17,8 @@ describe('useCounter react hook', () => {
 
         /* mocking useEffect */
         useEffect = jest.spyOn(React, 'useEffect');
-        mockUseEffect(); // 2 times
-        mockUseEffect(); //
+        // mockUseEffect(); // 2 times
+        // mockUseEffect(); //
     });
 
     it('should have an onClick function', () => {
@@ -37,6 +37,7 @@ describe('useCounter react hook', () => {
     });
 
     // Try not to run at the beginning
+    // Effect is running on every test because beforeEach resets values on every run
     it('should call side effect', () => {
         /* act(() => {
             result.onClick();

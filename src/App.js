@@ -4,6 +4,9 @@ import './App.css';
 import CustomInput from './components/CustomInput';
 import CounterExample from './components/CounterExample';
 import CustomReducer from './components/CustomReducer';
+import Toggle from './components/Toggle';
+import Card from './components/Card';
+import AppContext from './components/context/AppContext';
 
 function App() {
   return (
@@ -26,6 +29,12 @@ function App() {
       <br/>
       <CustomReducer />
       <CustomInput />
+      <br/>
+      <Toggle />
+      <br />
+      <Card onSelect={(item) => console.log(item)} />
+      <br />
+      <AppContext />
     </div>
   );
 }
